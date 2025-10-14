@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9fb;
+  color: #333;
+}
+
+/* NAVBAR */
+header {
+  background-color: #0a74da;
+  color: #fff;
+  padding: 20px 0;
+  /* Added for sticky navigation */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero {
+  /* Removed padding: 80px 10%; to use container width */
+  padding: 80px 0;
+  background-color: white;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 6px solid #0a74da;
+  box-shadow: 0 0 20px rgba(10, 116, 218, 0.3);
+  object-fit: cover;
+}
+
+.hero-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-icons img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+.hero-icons img:hover {
+  transform: scale(1.2);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  color: #0a74da;
+  margin-bottom: 10px;
+}
+
+.hero-text .tagline {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.btn {
+  background-color: #0a74da;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #095bb5;
+}
+
+/* SECTIONS */
+section {
+  /* Using container width, adjusting padding */
+  padding: 70px 0; 
+}
+
+h2 {
+  color: #0a74da;
+  text-align: center;
+  margin-bottom: 40px;
+  /* --- ADDED SECTION UNDERLINE HERE --- */
+  border-bottom: 3px solid #0a74da; /* Same blue color as logo/buttons */
+  display: inline-block; /* Shrinks border width to content width */
+  padding-bottom: 10px;
+  /* Centers the inline-block h2 */
+  width: 100%;
+}
+section h2 .container {
+    text-align: center; /* To center the inline block H2 within the container */
+}
+
+
+/* Projects Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card, .intern-card, .cert-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+/* Project Specific Styling */
+.project-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+.project-card p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+/* Internship/Certification Specific Styling */
+.intern-card ul, .cert-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+.intern-card li, .cert-card li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 5px;
+}
+.intern-card li::before, .cert-card li::before {
+    content: "•";
+    color: #0a74da;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+}
+
+
+/* --- SKILLS SECTION (UPDATED STYLES) --- */
+
+.skills-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.skills-col {
+  flex: 1;
+  min-width: 350px; 
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+.skills-col h3 {
+    color: #0a74da;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.skills-col ul {
+    list-style: none;
+}
+
+.skills-col li {
+    padding: 10px 15px;
+    background-color: #f0f8ff; 
+    border: 1px solid #dbe9f6;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+/* --- CONTACT SECTION (UPDATED STYLES) --- */
+
+.contact-content-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  padding-top: 20px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center;
+}
+
+.contact-info strong {
+    color: #0a74da;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #0a74da;
+    text-decoration: none;
+}
+
+/* Form Styling - Matching the Screenshot's Input Placement */
+.contact-form {
+    flex: 1.5; 
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 15px; 
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 120px; 
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0; 
+}
+
+.form-row input {
+    flex: 1;
+    margin-bottom: 15px; 
+}
+
+.contact-form .btn {
+    align-self: flex-start; 
+    margin-top: 5px;
+    padding: 10px 30px;
+}
+
+
+footer {
+  background-color: #0a74da;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .skills-grid,
+    .contact-content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .skills-col,
+    .contact-info,
+    .contact-form {
+        min-width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-text h2 {
+    text-align: center;
+  }
+
+  .nav {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  nav ul {
+      justify-content: center;
+  }
+
+  .form-row {
+      flex-direction: column;
+      gap: 0;
+  }
+}
